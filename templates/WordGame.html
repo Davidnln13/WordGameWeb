@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+<font size="+2">Here is your source word: <b>{{the_word}}</b></font>
+<p>Type seven words each seperated by a space</p>
+<form action='/Results' method='POST'>
+    <p>
+        Give me the words: <input type="text" name=seven_words>
+    </p>
+    <input type="submit" value="Check!">
+</form>
+<p></p>
+<form action='/Rules'>
+    <input type="submit" value="Rules">
+</form>
+{% endblock %}

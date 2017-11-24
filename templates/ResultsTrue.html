@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+<h2>Your results</h2>
+<ul>
+  {% for msg in get_flashed_messages() %}
+  <li> {{msg|safe}}
+  {% endfor %}
+</ul>
+<p>{{the_message}}</p>
+<p>Congratulations, What is your name?</p>
+
+<form action='/Highscore' method='POST'>
+  <input type="text" name="playername">
+  <p></p>
+  <input type="submit" value="Highscores!">
+</form>
+{% endblock %}

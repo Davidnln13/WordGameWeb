@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+<h2>Highscores</h2>
+<ol>
+  {% for line in the_output %}
+    <li> {{line}}
+  {% endfor %}
+  <!-- {%for val in the_outputV %}
+    <li> {{val}}
+
+    {% endfor %} -->
+</ol>
+<p>Your position is {{the_position}} out of {{the_length}}</p>
+<form action='/Game' method='GET'>
+  <p>
+    <input type="submit" value="Play again?">
+  </p>
+</form>
+{% endblock %}

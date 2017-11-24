@@ -1,0 +1,22 @@
+ {% extends "base.html" %}
+
+ {% block the_body %}
+        <h2><b>Welcome to my word game</b></h2>
+        <h3><u>Here are the rules</u></h3>
+        <ol>
+            <li>There must be a word
+            <li>The word must have more than two letters
+            <li>The word uses letters in the source word only
+            <li>The word cannot reuse letters more times than they appear in the source word
+            <li>The word is a real word
+            <li>The word is not a duplicate
+            <li>The word is not the source word
+        </ol>
+
+
+        <!--blah blah blah -->
+        <form action='/Game' method="GET">
+          <p>Are you ready?<p>
+          <input type="submit" value="Good luck">
+        </form>
+ {% endblock %}
